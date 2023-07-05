@@ -13,31 +13,31 @@ namespace MyServer
 
 
         /// <summary>
-        /// 当这个客户端掉线时
+        /// When this client goes offline
         /// </summary>
         /// <param name="e"></param>
         public override void OnDisConnected(Exception e)
         {
-            Console.WriteLine("客户端掉线了:"+e.Message);
+            Console.WriteLine("Client offline" + e.Message);
         }
 
         /// <summary>
-        /// 当连接出现异常时
+        /// When the connection is abnormal
         /// </summary>
         /// <param name="exception"></param>
         public override void OnException(Exception exception)
         {
-            Console.WriteLine("客户连接出现异常:" + exception.Message);
+            Console.WriteLine("An exception occurred in the client connection:" + exception.Message);
         }
 
         /// <summary>
-        /// 当收到客户端请求
+        /// When a client request is received
         /// </summary>
         /// <param name="opCode"></param>
         /// <param name="dict"></param>
         public override void OnOperationRequest(short opCode, Dictionary<short, object> dict)
         {
-            Console.WriteLine("收到客户端请求,请求代码是:"+ opCode);
+            Console.WriteLine("The client request is received, and the request code is:" + opCode);
 
             OpCode opcode = (OpCode)opCode;
 
@@ -47,14 +47,14 @@ namespace MyServer
                     {
                         object o = dict[1];
                         string str = (string)o;
-                        Console.WriteLine("收到客户端请求,请求参数值是:" + str);
+                        Console.WriteLine("The client request is received, and the request parameter value is:" + str);
 
                         Dictionary<short, object> dict_res = new Dictionary<short, object>();
-                        dict_res.Add(DictKey.dialog, "你好,我是服务器");
+                        dict_res.Add(DictKey.dialog, "Hello, I'm server");
                         SendResponse(opCode, ReturnCode.success, dict_res);
 
                         Dictionary<short, object> dict_ev = new Dictionary<short, object>();
-                        dict_ev.Add(1, "服务器即将重启!");
+                        dict_ev.Add(1, "The server is about to restart!");
                         SendEvent(1, dict_ev);
                     }
                     break;
@@ -63,18 +63,18 @@ namespace MyServer
                     {
 
                         //object o = dict[1];
-                        //string account = (string)o;//帐号
+                        //string account = (string)o;
 
                         //object o2 = dict[2];
-                        //string password = (string)o2;//密码
+                        //string password = (string)o2;
 
                         string account = (string)dict[ParameterCode.Account];
                         string password = (string)dict[ParameterCode.Password];
 
-                        //验证账号是否存在
+                        //Verify that the account exists
                         bool isExist = MysqlManager.QueryAccount(account);
 
-                        //验证传过来的账号和密码是否和数据库上的一致
+                        //Verify that the passed account and password are consistent with those on the database
                         if (isExist)
                         {
                             string queryPassword = MysqlManager.QueryPassword(account);
@@ -82,7 +82,7 @@ namespace MyServer
                             {
                                 if (queryPassword.Equals(password))
                                 {
-                                    //查询用户的信息，返回给客户端，客户端对用户名字进行判断
+                                    //Query the user's information, return it to the client, and the client judges the user name
 
                                     Player player = MysqlManager.QueryPlayer(account);
 
@@ -122,27 +122,7 @@ namespace MyServer
                             dict_res.Add(ParameterCode.error, "Account is not exist");
                             SendResponse(opCode, ReturnCode.fail, dict_res);
                         }
-
-
-                        //string password_temp = MyData.dict_userData[account];
-
-                        //if (password_temp.Equals(password))
-                        //{
-                        //    Userplayer.username = "代号001";
-
-                        //    Dictionary<short, object> dict_res = new Dictionary<short, object>();
-                        //    dict_res.Add(DictKey.player, Userplayer);
-
-                        //    SendResponse(opCode, ReturnCode.success, dict_res);
-                        //}
-                        //else
-                        //{
-                        //    Dictionary<short, object> dict_res = new Dictionary<short, object>();
-                        //    dict_res.Add(DictKey.error, "账号密码错误");
-
-                        //    SendResponse(opCode, ReturnCode.fail, dict_res);
-                        //}
-
+                        
                     }
                     break;
 
@@ -170,38 +150,6 @@ namespace MyServer
                     }
                     break;
 
-                //case OpCode.buyThing:
-                    {
-                       // //1.拿到客户端传来的请求信息
-                       //object o = dict[DictKey.buyThing];
-                       // string str = (string)o;
-
-                       // //2.进行处理
-                       // if (str.Equals("木剑"))
-                       // {
-                       //     player.coin -= 200;
-                       //     player.wuqi = "木剑";
-                       // }
-                       // else if (str.Equals("匕首"))
-                       // {
-                       //     player.coin -= 500;
-                       // }
-
-
-                       // //3.发送响应或事件给客户端
-                       // Dictionary<short, object> dict_res = new Dictionary<short, object>();
-                       // dict_res.Add(DictKey.player, player);
-
-                       // SendResponse(opCode, ReturnCode.success, dict_res);
-
-
-                       // Dictionary<short, object> dict_ev = new Dictionary<short, object>();
-                       // dict_ev.Add(DictKey.chengHao,"初入江湖");
-
-                       // SendEvent((short)EventCode.chuJiChengHao,dict_ev);
-                    }
-
-                    //break;
                 default:
                     break;
             }

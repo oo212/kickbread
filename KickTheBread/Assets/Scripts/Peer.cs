@@ -5,6 +5,10 @@ using TGClient;
 using System;
 using Newtonsoft.Json;
 using UnityEditor.Experimental.RestService;
+using System.Reflection;
+using TreeEditor;
+using MiniJSON;
+using System.Xml.Linq;
 
 public class Peer : PeerBase
 {
@@ -14,7 +18,6 @@ public class Peer : PeerBase
     {
         get { return player; }
     }
-
 
 
     public override void OnConnected(string message) 
@@ -76,14 +79,20 @@ public class Peer : PeerBase
 
                 case OpCode.login:
                     {
-                        
+                        //*****************
+                        //I really don't know what the bug is
+
                         object o = response.parameters[ParameterCode.player];
-                        string str = JsonConvert.SerializeObject(o);
+                        //string str = JsonConvert.SerializeObject(o);
+                        //Player info = JsonConvert.DeserializeObject<Player>(str);
 
-
-                        /*******************/
-                        Player playerinfo = JsonConvert.DeserializeObject<Player>(str);
-                        player = playerinfo;
+                        
+                        Player info = new Player();
+                        //info = o as Player;
+                        
+                        info.id = 1234;
+                        info.username = "test";
+                        player = info;
 
                         Login.LoginHandler(player);
                     }

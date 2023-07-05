@@ -18,6 +18,10 @@ public class ChooseRole : MonoBehaviour
    
     void Onbutton_chooserole()
     {
-        
+        //AudioManager.Instance.PlayVoice_loginButton();
+        //go_lobby.SetActive(true);
+        //go_lobby.GetComponent<Lobby>().SetUserinfo();
+        gameObject.SetActive(false);
+        //go_login.SetActive(false);
     }
 }

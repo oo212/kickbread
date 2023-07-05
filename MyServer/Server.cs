@@ -18,23 +18,23 @@ namespace MyServer
         {
             //PeerBase peer = new PeerBase();
             Peer peer = new Peer();
-            Console.WriteLine("1个客户端进来了");
+            Console.WriteLine("1 client came in");
             
            
             return peer;
         }
 
         /// <summary>
-        /// 当服务器出现异常时
+        /// When an exception occurs on the server
         /// </summary>
         /// <param name="serverException"></param>
         public override void OnServerException(Exception serverException)
         {
-            Console.WriteLine("服务出现异常：" + serverException.Message);
+            Console.WriteLine("Service exception:" + serverException.Message);
         }
 
         /// <summary>
-        /// 当服务器启动时
+        /// when the server starts
         /// </summary>
         public override void OnServerStart()
         {

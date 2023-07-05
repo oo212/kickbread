@@ -61,7 +61,8 @@ public class Login : MonoBehaviour
         if (player.username != "")//Explain that the role has been created
         {
             //Enter the role selection interface
-            go_image_chooseRole.GetComponent<ChooseRole>().text_role.text = "name:"+ player.username;
+            
+            //go_image_chooseRole.GetComponent<ChooseRole>().text_role.text = "name:"+ player.username;
             go_image_chooseRole.SetActive(true);
         }
         else //Indicates that no roles have been created

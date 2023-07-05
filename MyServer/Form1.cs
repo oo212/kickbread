@@ -20,7 +20,7 @@ namespace MyServer
         private void button_start_Click(object sender, EventArgs e)
         {
             Server server = new Server("127.0.0.1",4499);
-            //Server server = new Server("10.0.0.14", 4999);//放服务器上时使用内网IP
+            //Server server = new Server("10.0.0.14", 4999);
             server.Start();
             button_start.Enabled = false;
         }

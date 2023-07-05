@@ -12,18 +12,19 @@ namespace MyServer
 
     public enum OpCode
     {
-        diaolog = 1,//对话
-        login = 2,//登录
-        buyThing = 3,//购买物品
+        diaolog = 1,
+        login = 2,
+        buyThing = 3,
 
         createRole,
     }
 
     public enum EventCode
     {
-        restart,//重启
-        paiMing,//排名
-        chuJiChengHao,//初级称号
+        restart,
+        
+        paiMing,
+        chuJiChengHao,
     }
 
     public class ParameterCode
