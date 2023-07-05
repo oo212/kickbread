@@ -1,0 +1,59 @@
+C:\Users\Administrator\Desktop\MyServer\MyServer\bin\Debug\MyServer.exe.config
+C:\Users\Administrator\Desktop\MyServer\MyServer\bin\Debug\MyServer.exe
+C:\Users\Administrator\Desktop\MyServer\MyServer\bin\Debug\MyServer.pdb
+C:\Users\Administrator\Desktop\MyServer\MyServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\MyServer\MyServer\bin\Debug\TGServer.dll
+C:\Users\Administrator\Desktop\MyServer\MyServer\obj\Debug\MyServer.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\MyServer\MyServer\obj\Debug\MyServer.Form1.resources
+C:\Users\Administrator\Desktop\MyServer\MyServer\obj\Debug\MyServer.Properties.Resources.resources
+C:\Users\Administrator\Desktop\MyServer\MyServer\obj\Debug\MyServer.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\MyServer\MyServer\obj\Debug\MyServer.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\MyServer\MyServer\obj\Debug\MyServer.csproj.CopyComplete
+C:\Users\Administrator\Desktop\MyServer\MyServer\obj\Debug\MyServer.exe
+C:\Users\Administrator\Desktop\MyServer\MyServer\obj\Debug\MyServer.pdb
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\bin\Debug\MyServer.exe.config
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\bin\Debug\MyServer.exe
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\bin\Debug\MyServer.pdb
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\obj\Debug\MyServer.csproj.AssemblyReference.cache
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\obj\Debug\MyServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\obj\Debug\MyServer.Form1.resources
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\obj\Debug\MyServer.Properties.Resources.resources
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\obj\Debug\MyServer.csproj.GenerateResource.cache
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\obj\Debug\MyServer.csproj.CoreCompileInputs.cache
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\obj\Debug\MyServer.csproj.CopyComplete
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\obj\Debug\MyServer.exe
+C:\Users\Wenxuan\Documents\Tencent Files\914631933\FileRecv\TGServerdDemo\TGServerDemo服务器\TGServerDemo\MyServer\MyServer\MyServer\obj\Debug\MyServer.pdb
+C:\Users\Wenxuan\Desktop\MyServer\bin\Debug\MyServer.exe.config
+C:\Users\Wenxuan\Desktop\MyServer\bin\Debug\MyServer.exe
+C:\Users\Wenxuan\Desktop\MyServer\bin\Debug\MyServer.pdb
+C:\Users\Wenxuan\Desktop\MyServer\obj\Debug\MyServer.csproj.AssemblyReference.cache
+C:\Users\Wenxuan\Desktop\MyServer\obj\Debug\MyServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wenxuan\Desktop\MyServer\obj\Debug\MyServer.Form1.resources
+C:\Users\Wenxuan\Desktop\MyServer\obj\Debug\MyServer.Properties.Resources.resources
+C:\Users\Wenxuan\Desktop\MyServer\obj\Debug\MyServer.csproj.GenerateResource.cache
+C:\Users\Wenxuan\Desktop\MyServer\obj\Debug\MyServer.csproj.CoreCompileInputs.cache
+C:\Users\Wenxuan\Desktop\MyServer\obj\Debug\MyServer.csproj.CopyComplete
+C:\Users\Wenxuan\Desktop\MyServer\obj\Debug\MyServer.exe
+C:\Users\Wenxuan\Desktop\MyServer\obj\Debug\MyServer.pdb
+C:\Users\Wenxuan\Desktop\MyServer\bin\Debug\MySql.Data.dll
+C:\Users\Wenxuan\Desktop\MyServer\bin\Debug\System.Memory.dll
+C:\Users\Wenxuan\Desktop\MyServer\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Wenxuan\Desktop\MyServer\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Wenxuan\Desktop\MyServer\bin\Debug\System.Buffers.dll
+C:\Users\Wenxuan\Desktop\MyServer\bin\Debug\MySql.Data.xml
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\bin\Debug\MyServer.exe.config
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\bin\Debug\MyServer.exe
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\bin\Debug\MyServer.pdb
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\bin\Debug\System.Memory.dll
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\bin\Debug\System.Buffers.dll
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.AssemblyReference.cache
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.Form1.resources
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.Properties.Resources.resources
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.GenerateResource.cache
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.CoreCompileInputs.cache
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.CopyComplete
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.exe
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.pdb
