@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CreateRole : MonoBehaviour
 {
     public Button button_queren;
-    public InputField input_username;
+    public TMP_InputField input_username;
 
     public GameObject go_chooseRole;
 
@@ -35,7 +36,7 @@ public class CreateRole : MonoBehaviour
     void OnCreateRole(Player player) 
     {
         //Enter the role selection interface and show information
-        go_chooseRole.GetComponent<ChooseRole>().text_role.text = "Username;" + player.username;
+        go_chooseRole.GetComponent<ChooseRole>().text_role.text = "Username:" + player.username;
         go_chooseRole.SetActive(true);
         gameObject.SetActive(false);
     }

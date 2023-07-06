@@ -24,6 +24,11 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void JumpToExit()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     public void JumpToInvetory()
     {
         SceneManager.LoadScene(3);

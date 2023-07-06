@@ -21,6 +21,7 @@ public class BreadFound : MonoBehaviour
         if (other.tag == "Avatar")
         {
             CaptureBreadUI.Instance.AddBreadNum();
+            Destroy(gameObject);
         }
     }
 }

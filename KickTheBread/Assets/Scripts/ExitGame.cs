@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExitGame : MonoBehaviour
 {
-    public void OnExitGamne()
+    public void OnExitGame()
     {
 #if UNITY_EDITOR //Exit in Unity Editor
         UnityEditor.EditorApplication.isPlaying = false;

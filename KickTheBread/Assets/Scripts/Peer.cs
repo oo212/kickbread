@@ -81,19 +81,14 @@ public class Peer : PeerBase
                     {
                         //*****************
                         //I really don't know what the bug is
+                        //update:solved
 
                         object o = response.parameters[ParameterCode.player];
-                        //string str = JsonConvert.SerializeObject(o);
-                        //Player info = JsonConvert.DeserializeObject<Player>(str);
+                        string str = JsonConvert.SerializeObject(o);
+                        Debug.Log(str); 
+                        Player info = JsonConvert.DeserializeObject<Player>(str);
 
-                        
-                        Player info = new Player();
-                        //info = o as Player;
-                        
-                        info.id = 1234;
-                        info.username = "test";
                         player = info;
-
                         Login.LoginHandler(player);
                     }
                     break;
@@ -115,6 +110,7 @@ public class Peer : PeerBase
         { 
             string error = (string)response.parameters[ParameterCode.error];
             Debug.Log(error);
+
         }
 
     }

@@ -78,6 +78,7 @@ namespace MyServer
                         if (isExist)
                         {
                             string queryPassword = MysqlManager.QueryPassword(account);
+                            Console.WriteLine("queryPassword" + queryPassword);
                             if (queryPassword != "")
                             {
                                 if (queryPassword.Equals(password))

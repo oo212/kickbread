@@ -62,7 +62,7 @@ public class Login : MonoBehaviour
         {
             //Enter the role selection interface
             
-            //go_image_chooseRole.GetComponent<ChooseRole>().text_role.text = "name:"+ player.username;
+            go_image_chooseRole.GetComponent<ChooseRole>().text_role.text = "Username:"+ player.username;
             go_image_chooseRole.SetActive(true);
         }
         else //Indicates that no roles have been created
