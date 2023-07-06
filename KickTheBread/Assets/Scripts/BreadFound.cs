@@ -20,7 +20,7 @@ public class BreadFound : MonoBehaviour
     {
         if (other.tag == "Avatar")
         {
-            CaptureBreadUI.Insatance.AddBreadNum();
+            CaptureBreadUI.Instance.AddBreadNum();
         }
     }
 }

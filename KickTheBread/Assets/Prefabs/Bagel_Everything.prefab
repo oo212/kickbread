@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7113224834232806177}
   - component: {fileID: 7362860572062096616}
   - component: {fileID: -5960661019639063110}
+  - component: {fileID: 4450200761400379061}
   m_Layer: 0
   m_Name: Bagel_Everything
   m_TagString: Untagged
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.42313337, y: 0.16778877, z: 0.42313337}
   m_Center: {x: 0.000000074505806, y: 0.095418274, z: 0}
+--- !u!114 &4450200761400379061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757340485567214084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80000bfa70398435698fad818cfe0ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

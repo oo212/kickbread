@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,21 +7,22 @@ using UnityEngine.UI;
 public class CaptureBreadUI : MonoBehaviour
 {
 
-    //The amount of captured bread
     public Text Text_Number;
-
-    public static CaptureBreadUI Insatance;
-
+    
+    public static CaptureBreadUI Instance;
+    
     void Awake()
     {
-        Insatance = this;
+        Instance = this;
     }
 
+   
     public void AddBreadNum()
     {
-        //get the current number of bread
-        int number = int.Parse(Text_Number.text);
-        number++;
-        Text_Number.text = number.ToString();
+        int _num = Int32.Parse(Text_Number.text);
+        _num++;
+        Text_Number.text = _num.ToString();
     }
+
+    
 }
