@@ -123,6 +123,6 @@ MonoBehaviour:
     type: 3}
   burgerbun: {fileID: 3702695104034378489, guid: d86e57699ad1d4a41974e9e28979001f,
     type: 3}
-  laugenstange: {fileID: 3085952687760243170, guid: a036df18f719542c0bea8fab1aaa8365,
+  breadstick: {fileID: 3085952687760243170, guid: a036df18f719542c0bea8fab1aaa8365,
     type: 3}
   toast: {fileID: 5652513897863623921, guid: ceb918e762af84e3394d8f48c8c0f724, type: 3}

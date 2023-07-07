@@ -8,8 +8,6 @@ public class ConnectManager : MonoBehaviour
 {
 
     public Button button_connect;
-
-    //
     public Button button_dialog, button_buything;
 
     private static Peer peer = null;
@@ -55,10 +53,9 @@ public class ConnectManager : MonoBehaviour
     {
         Dictionary<short, object> dict = new Dictionary<short, object>();
         dict.Add(0, "Hello,I am Client");
-        peer.SendRequest((short)OpCode.diaolog, dict);
+        peer.SendRequest((short)OpCode.dialog, dict);
     }
 
-    //
     public void Onbutton_buyThing()
     {
         Dictionary<short, object> dict = new Dictionary<short, object>();

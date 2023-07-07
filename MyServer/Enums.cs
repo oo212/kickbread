@@ -12,19 +12,16 @@ namespace MyServer
 
     public enum OpCode
     {
-        diaolog = 1,
-        login = 2,
-        buyThing = 3,
-
+        login,
+        dialog,
         createRole,
+        RegisterAccount,
     }
 
     public enum EventCode
     {
-        restart,
-        
-        paiMing,
-        chuJiChengHao,
+
+
     }
 
     public class ParameterCode
@@ -44,8 +41,6 @@ namespace MyServer
         public const short player = 2;
         public const short error = 3;
 
-        //public const short buyThing = 4;
-        //public const short chengHao = 5;
     }
 
 }

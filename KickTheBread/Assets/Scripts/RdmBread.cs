@@ -11,7 +11,7 @@ public class RdmBread : MonoBehaviour
 
     public GameObject burgerbun;
 
-    public GameObject laugenstange;
+    public GameObject breadstick;
 
     public GameObject toast;
 
@@ -27,7 +27,7 @@ public class RdmBread : MonoBehaviour
         else if (randomIndex == 2)
             InsBurgerbun();
         else if (randomIndex == 3)
-            InsLaugenstange();
+            InsBreadstick();
         else
             InsToast();
         
@@ -46,7 +46,7 @@ public class RdmBread : MonoBehaviour
 
     public void InsBaguette()
     {
-        Instantiate(bagel, transform.position + new Vector3(0, 5f, 0), transform.rotation);
+        Instantiate(baguette, transform.position + new Vector3(0, 5f, 0), transform.rotation);
     }
 
     public void InsBurgerbun()
@@ -54,9 +54,9 @@ public class RdmBread : MonoBehaviour
         Instantiate(burgerbun, transform.position + new Vector3(0, 5f, 0), transform.rotation);
     }
 
-    public void InsLaugenstange()
+    public void InsBreadstick()
     {
-        Instantiate(laugenstange, transform.position + new Vector3(0, 5f, 0), transform.rotation);
+        Instantiate(breadstick, transform.position + new Vector3(0, 5f, 0), transform.rotation);
     }
 
     public void InsToast()

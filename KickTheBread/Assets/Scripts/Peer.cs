@@ -36,12 +36,6 @@ public class Peer : PeerBase
 
         switch (eventcode)
         {
-            case EventCode.restart:
-                break;
-            case EventCode.paiMing:
-                break;
-            case EventCode.chuJiChengHao:
-                break;
             default:
                 break;
         }
@@ -63,7 +57,7 @@ public class Peer : PeerBase
         {
             switch (opCode)
             {
-                case OpCode.diaolog:
+                case OpCode.dialog:
                     {
                         string dialog = (string)response.parameters[2];
                         Debug.Log("0");
@@ -109,6 +103,16 @@ public class Peer : PeerBase
         else//failed
         { 
             string error = (string)response.parameters[ParameterCode.error];
+
+            if (opCode == OpCode.login) 
+            {
+                Login.LoginFailHandler(error);
+            }
+            else if (opCode == OpCode.RegisterAccount)
+            {
+                RegisterAccount.RegisterFailHanler(error);
+            }
+
             Debug.Log(error);
 
         }

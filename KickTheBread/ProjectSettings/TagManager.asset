@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Avatar
+  - Baguette
+  - Bagel
+  - Burgerbun
+  - Breadstick
+  - Toast
   layers:
   - Default
   - TransparentFX

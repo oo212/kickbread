@@ -43,7 +43,7 @@ namespace MyServer
 
             switch (opcode)
             {
-                case OpCode.diaolog:
+                case OpCode.dialog:
                     {
                         object o = dict[1];
                         string str = (string)o;
@@ -148,6 +148,44 @@ namespace MyServer
                             dict_res.Add(ParameterCode.error, "Create role failed");
                             SendResponse(opCode, ReturnCode.fail, dict_res);
                         }
+                    }
+                    break;
+
+                case OpCode.RegisterAccount:
+                    {
+                        string account = (string)dict[ParameterCode.Account];
+                        string password = (string)dict[ParameterCode.Password];
+
+                        //Check if this account exists
+                        bool isExistAccount = MysqlManager.QueryAccount(account);
+                        if (isExistAccount == false)
+                            //It means that there is no such account, you can register
+                        {
+                            //Insert a set of data
+                            bool isInsert = MysqlManager.InsertUser(account, password);
+                            if (isInsert == true)//created successfully
+                            {
+
+                                Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                                dict_res.Add(ParameterCode.Account,account);
+                                dict_res.Add(ParameterCode.Password, password);
+                                SendResponse(opCode, ReturnCode.fail, dict_res);
+
+                            }
+                            else
+                            {
+                                Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                                dict_res.Add(ParameterCode.error, "Registration failed, please try again!");
+                                SendResponse(opCode, ReturnCode.fail, dict_res);
+                            }
+                        }
+                        else
+                        {
+                            Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                            dict_res.Add(ParameterCode.error, "Account already exists");
+                            SendResponse(opCode, ReturnCode.fail, dict_res);
+                        }
+
                     }
                     break;
 

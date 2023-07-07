@@ -7,18 +7,17 @@
 
     public enum OpCode
     {
-        diaolog = 1,
-        login = 2,
-        buyThing = 3,
+        dialog,
+        login,
+        buyThing,
 
         createRole,
-    }
+        RegisterAccount,
+}
 
     public enum EventCode
     {
-        restart,
-        paiMing,
-        chuJiChengHao,
+
     }
 
     public class ParameterCode

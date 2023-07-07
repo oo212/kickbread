@@ -52,13 +52,8 @@ namespace MyServer
                 MySqlCommand command = new MySqlCommand(commandText, msc);
 
                 object o = command.ExecuteScalar();
-                string str = "";
-                str = (string)o;
-
-                if (str != "")
+                if (o != null)
                 { return true; }
-                else 
-                { return false; }
              
             }
             catch (Exception e)
@@ -185,6 +180,37 @@ namespace MyServer
                 msc.Dispose();
             }
             return num;
+        }
+
+        public static bool InsertUser(string account, string password)
+        {
+
+            MySqlConnection msc = new MySqlConnection(connectString);
+            int num = 0;
+            try
+            {
+                msc.Open();
+
+                string comandText = "INSERT INTO `kickbread`.`username` (`account`, `password`) VALUES ('" + account + "', '" + password + "');";
+                MySqlCommand command = new MySqlCommand(comandText, msc);
+
+                num = command.ExecuteNonQuery();
+                if (num > 0)
+                {
+                    return true;
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                msc.Close();
+                msc.Dispose();
+            }
+            return false;
         }
     }
 }

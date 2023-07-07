@@ -13,17 +13,23 @@ public class Login : MonoBehaviour
 
     public GameObject go_image_chooseRole;
     public GameObject go_image_createRole;
+    public GameObject go_image_register;
 
     public delegate void dele_LoginHandler(Player player);
     public static dele_LoginHandler LoginHandler;
 
-    
+    public delegate void dele_LoginFailHandler(string error);
+    public static dele_LoginFailHandler LoginFailHandler;
+
     void Start()
     {
         button_login.onClick.AddListener(Onbutton_login);
-        button_quit.onClick.AddListener(() => { Application.Quit(); });
+        //button_quit.onClick.AddListener(() => { Application.Quit(); });
+        button_register.onClick.AddListener(OnButtonRegister);
+
 
         LoginHandler += OnLogin;
+        LoginFailHandler += OnLoginFail;
     }
 
     void Onbutton_login()
@@ -70,5 +76,15 @@ public class Login : MonoBehaviour
             //Enter the role creation interface
             go_image_createRole.SetActive(true);
         }
+    }
+
+    void OnLoginFail(string error) 
+    {
+        message.text = error;
+    }
+
+    void OnButtonRegister() 
+    { 
+        go_image_register.SetActive(true);
     }
 }

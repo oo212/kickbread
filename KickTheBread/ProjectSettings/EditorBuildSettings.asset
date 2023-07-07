@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/POI - Demo 1.unity
     guid: 4fb5edaf7ff0f4c7bb0abc8e908c3d03
   - enabled: 1
-    path: Assets/Scenes/Startgame - Demo.unity
+    path: Assets/Scenes/Startgame_without_Server.unity
     guid: 86868c839601e6a46bff28b3a6175450
   - enabled: 1
     path: Assets/Scenes/Exit.unity
