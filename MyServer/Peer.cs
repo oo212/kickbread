@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TGServer;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MyServer
 {
@@ -45,7 +47,7 @@ namespace MyServer
             {
                 case OpCode.dialog:
                     {
-                        object o = dict[1];
+                        object o = dict[0];
                         string str = (string)o;
                         Console.WriteLine("The client request is received, and the request parameter value is:" + str);
 
@@ -61,12 +63,6 @@ namespace MyServer
 
                 case OpCode.login:
                     {
-
-                        //object o = dict[1];
-                        //string account = (string)o;
-
-                        //object o2 = dict[2];
-                        //string password = (string)o2;
 
                         string account = (string)dict[ParameterCode.Account];
                         string password = (string)dict[ParameterCode.Password];
@@ -87,20 +83,20 @@ namespace MyServer
 
                                     Player player = MysqlManager.QueryPlayer(account);
 
-                                    if (player.id != -1)
-                                    {
+                                    //if (player.id != -1)
+                                    //{
                                         Userplayer = player;
 
                                         Dictionary<short, object> dict_res = new Dictionary<short, object>();
                                         dict_res.Add(ParameterCode.player, player);
                                         SendResponse(opCode, ReturnCode.success, dict_res);
-                                    }
-                                    else
-                                    {
-                                        Dictionary<short, object> dict_res = new Dictionary<short, object>();
-                                        dict_res.Add(ParameterCode.error, "Query user failed");
-                                        SendResponse(opCode, ReturnCode.fail, dict_res);
-                                    }
+                                    //}
+                                    //else
+                                    //{
+                                    //    Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                                    //    dict_res.Add(ParameterCode.error, "Query user failed");
+                                    //    SendResponse(opCode, ReturnCode.fail, dict_res);
+                                    //}
 
                                 }
                                 else
@@ -129,24 +125,34 @@ namespace MyServer
 
                 case OpCode.createRole:
                     {
-                        string username = (string)dict[ParameterCode.usernamne];
+                        string username = (string)dict[ParameterCode.username];
+                        //string account = (string)dict[ParameterCode.Account];
 
-                        //update username in SQL
-                        int num = MysqlManager.UpdateUsername(username, Userplayer.id);
-                        if (num > 0)//update success
-                        {
-                            Userplayer.username = username;
-
-                            //send to Client
-                            Dictionary<short, object> dict_res = new Dictionary<short, object>();
-                            dict_res.Add(ParameterCode.usernamne, username);
-                            SendResponse(opCode, ReturnCode.success, dict_res);
-                        }
-                        else//update failed
+                        bool isExist = MysqlManager.QueryIsExistUsername(username);
+                        if (isExist)
                         {
                             Dictionary<short, object> dict_res = new Dictionary<short, object>();
-                            dict_res.Add(ParameterCode.error, "Create role failed");
+                            dict_res.Add(ParameterCode.error, "Username is existed");
                             SendResponse(opCode, ReturnCode.fail, dict_res);
+                        }
+                        else { 
+                                //update username in SQL
+                                int num = MysqlManager.UpdateUsername(username, Userplayer.account);
+                            if (num > 0)//update success
+                            {
+                                Userplayer.username = username;
+
+                                //send to Client
+                                Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                                dict_res.Add(ParameterCode.username, username);
+                                SendResponse(opCode, ReturnCode.success, dict_res);
+                            }
+                            else//update failed
+                            {
+                                Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                                dict_res.Add(ParameterCode.error, "Create role failed");
+                                SendResponse(opCode, ReturnCode.fail, dict_res);
+                            }
                         }
                     }
                     break;
@@ -169,7 +175,7 @@ namespace MyServer
                                 Dictionary<short, object> dict_res = new Dictionary<short, object>();
                                 dict_res.Add(ParameterCode.Account,account);
                                 dict_res.Add(ParameterCode.Password, password);
-                                SendResponse(opCode, ReturnCode.fail, dict_res);
+                                SendResponse(opCode, ReturnCode.success, dict_res);
 
                             }
                             else
@@ -188,6 +194,100 @@ namespace MyServer
 
                     }
                     break;
+
+                case OpCode.QueryRanking:
+                    {
+                        List<RankingData> list = MysqlManager.QueryRanking();
+                        int myranking = MysqlManager.QueryMyRanking(Userplayer.account);
+                        if (list.Count > 0)
+                        {
+                            Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                            dict_res.Add(ParameterCode.RankingDataList, list);
+                            dict_res.Add(ParameterCode.MyRanking, myranking);
+                            SendResponse(opCode, ReturnCode.success, dict_res);
+                        }
+                        else
+                        {
+                            Dictionary<short, object> dict_response = new Dictionary<short, object>();
+                            dict_response.Add(ParameterCode.error, "Query Ranking Error");
+                            SendResponse(opCode, ReturnCode.fail, dict_response);
+                        }
+                    }
+                    break;
+
+                case OpCode.UpdateNumber:
+                    {
+
+                        string username = (string)dict[ParameterCode.username];
+
+                        int burgerbunNumber = Convert.ToInt32(dict[ParameterCode.BurgerBun]);
+                        int bagelNumber = Convert.ToInt32(dict[ParameterCode.Bagel]);
+                        int toastNumber = Convert.ToInt32(dict[ParameterCode.Toast]);
+                        int baguetteNumber = Convert.ToInt32(dict[ParameterCode.Baguette]);
+                        int breadstickNumber = Convert.ToInt32(dict[ParameterCode.Breadstick]);
+
+
+                        //update number in SQL
+                        int num = MysqlManager.UpdateBreadNumber(Userplayer.username, burgerbunNumber, bagelNumber, toastNumber, baguetteNumber, breadstickNumber);
+                        if (num > 0)//update success
+                        {
+                            //send to Client
+                            Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                            dict_res.Add(ParameterCode.error, "Update successed");
+                            SendResponse(opCode, ReturnCode.success, dict_res);
+                        }
+                        else//update failed
+                        {
+                            Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                            dict_res.Add(ParameterCode.error, "Update failed");
+                            SendResponse(opCode, ReturnCode.fail, dict_res);
+                        }
+
+                    }
+                    break;
+
+                case OpCode.QueryUsername:
+                    {
+                        string sendusername = (string)dict[ParameterCode.username];
+
+                        bool isExist = MysqlManager.QueryIsExistUsername(sendusername);
+                        if (isExist)
+                        {
+                            Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                            dict_res.Add(ParameterCode.username, sendusername);
+                            SendResponse(opCode, ReturnCode.success, dict_res);
+                        }
+                        else
+                        {
+                            Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                            dict_res.Add(ParameterCode.error, "Username is not existed");
+                            SendResponse(opCode, ReturnCode.fail, dict_res);
+                        }
+                    }
+                    break;
+
+                case OpCode.SendBread:
+                    {
+                        string username = (string)dict[ParameterCode.username];
+                        string sendusername = (string)dict[ParameterCode.sendusername];
+                        string breadtype = (string)dict[ParameterCode.BreadType];
+
+                        bool isSuccusse = MysqlManager.SendBread(username,sendusername,breadtype);
+                        if (isSuccusse)
+                        {
+                            Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                            dict_res.Add(ParameterCode.username, username);
+                            SendResponse(opCode, ReturnCode.success, dict_res);
+                        }
+                        else
+                        {
+                            Dictionary<short, object> dict_res = new Dictionary<short, object>();
+                            dict_res.Add(ParameterCode.error, "Send Bread Error");
+                            SendResponse(opCode, ReturnCode.fail, dict_res);
+                        }
+                    }
+                    break;
+
 
                 default:
                     break;

@@ -8,19 +8,25 @@ namespace MyServer
 {
     class Enums
     {
+
     }
 
     public enum OpCode
     {
-        login,
-        dialog,
+        dialog = 1,
+        login = 2,
+        buyThing = 3,
+
         createRole,
         RegisterAccount,
+        QueryRanking,
+        UpdateNumber,
+        SendBread,
+        QueryUsername,
     }
 
     public enum EventCode
     {
-
 
     }
 
@@ -28,11 +34,21 @@ namespace MyServer
     {
         public const short Account = 6;
         public const short Password = 7;
-
         public const short error = 8;
-
         public const short player = 9;
-        public const short usernamne = 10;
+        public const short username = 10;
+
+        public const short RankingDataList = 11;
+        public const short MyRanking = 12;
+
+        public const short BurgerBun = 13;
+        public const short Bagel = 14;
+        public const short Toast = 15;
+        public const short Baguette = 16;
+        public const short Breadstick = 17;
+
+        public const short BreadType = 18;
+        public const short sendusername = 19;
     }
 
     public class DictKey{

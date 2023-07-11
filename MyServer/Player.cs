@@ -9,17 +9,15 @@ namespace MyServer
     class Player
     {
         public bool IsConnect = true;
-        public int id = 0;
+        public string account = "";
         public string username = "";
 
 
         //bread 
-        public int bread_1 = 0;
-        public int bread_2 = 0;
-        public int bread_3 = 0;
-        public int bread_4 = 0;
-        public int bread_5 = 0;
-     
-
+        public int BurgerBun = 0;
+        public int Bagel = 0;
+        public int Toast = 0;
+        public int Baguette = 0;
+        public int Breadstick = 0;
     }
 }

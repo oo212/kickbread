@@ -50,10 +50,10 @@ C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\bin\Debug\
 C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\bin\Debug\System.Buffers.dll
 C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.AssemblyReference.cache
 C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.SuggestedBindingRedirects.cache
-C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.Form1.resources
 C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.Properties.Resources.resources
 C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.GenerateResource.cache
 C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.CoreCompileInputs.cache
 C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.csproj.CopyComplete
 C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.exe
 C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.pdb
+C:\Users\Wenxuan\Desktop\social-gaming-praktikum\assignment2\MyServer\obj\Debug\MyServer.MyServer.resources
